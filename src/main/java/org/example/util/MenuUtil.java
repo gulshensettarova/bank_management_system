@@ -17,6 +17,7 @@ public class MenuUtil {
         System.out.println("4. Remove Customer by ID");
         System.out.println("5. Edit Customer Details");
         System.out.println("6. Transfer Money");
+        System.out.println("7. New Account");
         System.out.println("0. Exit");
         System.out.println("======================================");
         System.out.print("Please select an option: ");
@@ -46,6 +47,9 @@ public class MenuUtil {
                 System.out.print("Enter Customer ID: ");
                 int id = scanner.nextInt();
                 cu.edit(id, cu.getRequest());
+            }
+            case 7->{
+
             }
             default -> System.out.println("Invalid option. Please try again.");
 

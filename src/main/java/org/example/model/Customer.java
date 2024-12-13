@@ -1,13 +1,14 @@
 package org.example.model;
 
 import java.util.Date;
+import java.util.Set;
 
 public class Customer {
     private long id;
     private String name;
     private String surname;
     private String birthdate;
-    private Account[] accounts=new Account[10];
+    private Set<Account> accounts;
 
     public long getId() {
         return id;
@@ -34,12 +35,12 @@ public class Customer {
     }
 
 
-    public Account[] getAccounts() {
+    public Set<Account> getAccounts() {
         return accounts;
     }
 
-    public void setAccounts(Account[] accounts) {
-        this.accounts = accounts;
+    public void setAccount(Account account) {
+        this.accounts.add(account);
     }
 
     public Customer(){
