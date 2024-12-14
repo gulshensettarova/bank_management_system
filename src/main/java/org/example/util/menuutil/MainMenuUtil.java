@@ -2,7 +2,7 @@ package org.example.util.menuutil;
 
 
 import org.example.enums.menuoption.MainMenuOption;
-import org.example.util.InputUtil;
+import org.example.service.InputUtil;
 
 public class MainMenuUtil {
     public static void displayMainMenu() {
@@ -15,9 +15,9 @@ public class MainMenuUtil {
         System.out.println("0. Exit");
         System.out.println("======================================");
         System.out.print("Please select an option: ");
-        executeMainMenu();
+        executeMenu();
     }
-    public static void executeMainMenu(){
+    public static void executeMenu(){
         MainMenuOption option = MainMenuOption.values()[InputUtil.getOption()];
         switch (option){
             case CUSTOMER -> CustomerMenuUtil.displayCustomerMenu();

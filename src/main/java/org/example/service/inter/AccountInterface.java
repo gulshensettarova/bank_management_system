@@ -1,4 +1,4 @@
-package org.example.util.inter;
+package org.example.service.inter;
 
 import org.example.model.Account;
 import org.example.model.Customer;

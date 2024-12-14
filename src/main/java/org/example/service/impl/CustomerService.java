@@ -1,30 +1,17 @@
-package org.example.util.impl;
+package org.example.service.impl;
 
 import org.example.model.Bank;
 import org.example.model.Customer;
-import org.example.util.inter.CustomerInterface;
+import org.example.service.inter.CustomerInterface;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class CustomerUtil implements CustomerInterface {
+public class CustomerService implements CustomerInterface {
 
     Scanner sc=new Scanner(System.in);
 
-    public Customer getRequest(){
-        Customer customer = new Customer();
-        System.out.println("Enter Customer ID: ");
-        customer.setId(sc.nextInt());
-        sc.nextLine();
-        System.out.println("Enter Customer Name: ");
-        customer.setName(sc.nextLine());
-        System.out.println("Enter Customer Surname: ");
-        customer.setSurname(sc.nextLine());
-        System.out.println("Enter Customer Birth Date (yyyy-MM-dd): ");
-        customer.setBirthdate(sc.nextLine());
-        return customer;
 
-    }
     @Override
     public void add(Customer request) {
         if(!Bank.customerList.containsKey(request.getId())){

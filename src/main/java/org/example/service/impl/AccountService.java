@@ -1,15 +1,14 @@
-package org.example.util.impl;
+package org.example.service.impl;
 
 import org.example.enums.AccountType;
 import org.example.model.Account;
-import org.example.model.Bank;
 import org.example.model.Customer;
-import org.example.util.CustomerService;
-import org.example.util.inter.AccountInterface;
+import org.example.service.CustomerAccountService;
+import org.example.service.inter.AccountInterface;
 
 import java.util.Scanner;
 
-public class AccountUtil implements AccountInterface {
+public class AccountService implements AccountInterface {
     private static final Scanner sc = new Scanner(System.in);
 
     public Account getRequest(){
@@ -28,7 +27,7 @@ public class AccountUtil implements AccountInterface {
     }
     @Override
     public void createAccount(Customer customer, Account request) {
-       CustomerService.addAccountToCustomer(customer,request);
+       CustomerAccountService.addAccountToCustomer(customer,request);
     }
 
     @Override

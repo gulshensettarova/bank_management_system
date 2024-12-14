@@ -1,13 +1,13 @@
-package org.example.util.impl;
+package org.example.service.impl;
 
 import org.example.model.Account;
 import org.example.model.Bank;
 import org.example.model.Transaction;
-import org.example.util.inter.TransactionInterface;
+import org.example.service.inter.TransactionInterface;
 
 import java.util.List;
 
-public class TransactionUtil implements TransactionInterface {
+public class TransactionService implements TransactionInterface {
     @Override
     public void withdraw(double amount) {
 
