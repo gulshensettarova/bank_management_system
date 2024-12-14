@@ -15,6 +15,10 @@ public class InputUtil {
         System.out.print("Enter Customer ID: ");
         return scanner.nextInt();
     }
+    public static int requestAccountId(){
+        System.out.print("Enter Customer ID: ");
+        return scanner.nextInt();
+    }
     public  static double requestMoney(){
         System.out.print("Enter amount to transfer: ");
         return scanner.nextDouble();
@@ -31,6 +35,6 @@ public class InputUtil {
         System.out.println("Enter Customer Birth Date (yyyy-MM-dd): ");
         customer.setBirthdate(scanner.nextLine());
         return customer;
-
     }
+
 }
