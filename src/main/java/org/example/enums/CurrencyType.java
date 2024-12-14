@@ -1,6 +1,6 @@
 package org.example.enums;
 
-public enum Currency {
+public enum CurrencyType {
     USD,
     EUR,
     AZN,

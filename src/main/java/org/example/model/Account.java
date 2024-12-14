@@ -1,7 +1,7 @@
 package org.example.model;
 
 import org.example.enums.AccountType;
-import org.example.enums.Currency;
+import org.example.enums.CurrencyType;
 
 import java.util.Date;
 import java.util.List;
@@ -11,7 +11,7 @@ public class Account {
     private double balance;
     private double interestRate;
     private AccountType accountType;
-    private Currency currency;
+    private CurrencyType currency;
     private Date createdAt;
     private boolean isActive;
     private List<Transaction> transactions;
@@ -48,11 +48,11 @@ public class Account {
         this.accountType = accountType;
     }
 
-    public Currency getCurrency() {
+    public CurrencyType getCurrency() {
         return currency;
     }
 
-    public void setCurrency(Currency currency) {
+    public void setCurrency(CurrencyType currency) {
         this.currency = currency;
     }
 
