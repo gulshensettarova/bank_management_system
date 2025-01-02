@@ -5,6 +5,7 @@ import org.example.model.Customer;
 import org.example.service.CustomerInterface;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class CustomerService implements CustomerInterface {
@@ -35,7 +36,7 @@ public class CustomerService implements CustomerInterface {
     @Override
     public void edit(long id, Customer request) {
         Customer existingCustomer = Bank.customerList.get(id);
-        if (existingCustomer != null) {
+        if (Objects.nonNull(existingCustomer)) {
             existingCustomer.setName(request.getName());
             existingCustomer.setSurname(request.getSurname());
             existingCustomer.setBirthdate(request.getBirthdate());

@@ -3,25 +3,21 @@ package org.example.enums.menuoption;
 import org.example.strategy.*;
 
 public enum MainMenuOption {
-    EXIT,
+    EXIT(new ExitStrategy()),
     CUSTOMER(new CustomerStrategy()),
     ACCOUNT(new AccountStrategy()),
-    TRANSACTION(new TransactionStrategy());
+    TRANSACTION(new TransactionStrategy()),
+    MAIN(new MainMenuStrategy());
 
-    private MenuStrategy strategy;
+    private final MenuStrategy strategy;
 
     public MenuStrategy getStrategy() {
         return strategy;
     }
 
-    public void setStrategy(MenuStrategy strategy) {
-        this.strategy = strategy;
-    }
 
     MainMenuOption(MenuStrategy strategy){
         this.strategy = strategy;
     }
-    MainMenuOption(){
 
-    }
 }

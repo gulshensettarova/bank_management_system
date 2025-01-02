@@ -1,6 +1,7 @@
 package org.example.strategy;
 
 import org.example.enums.menuoption.CustomerMenuOption;
+import org.example.enums.menuoption.MainMenuOption;
 import org.example.util.InputUtil;
 import org.example.service.impl.CustomerService;
 import org.example.util.CustomerUtil;
@@ -31,7 +32,7 @@ public class CustomerStrategy implements MenuStrategy{
             case ADD_CUSTOMER -> service.add(InputUtil.requestCustomer());
             case REMOVE_CUSTOMER -> service.remove(InputUtil.requestCustomerId());
             case EDIT_CUSTOMER -> service.edit(InputUtil.requestCustomerId(), InputUtil.requestCustomer());
-            case BACK_TO_MAIN_MENU ->  new MainMenuStrategy().display();
+            case BACK_TO_MAIN_MENU -> MainMenuOption.MAIN.getStrategy().display();
 
             default -> System.out.println("Invalid option. Please try again.");
         }

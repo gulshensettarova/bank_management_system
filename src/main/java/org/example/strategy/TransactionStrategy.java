@@ -1,5 +1,6 @@
 package org.example.strategy;
 
+import org.example.enums.menuoption.MainMenuOption;
 import org.example.enums.menuoption.TransactionMenuOption;
 import org.example.util.InputUtil;
 import org.example.service.impl.TransactionService;
@@ -28,7 +29,7 @@ public class TransactionStrategy implements MenuStrategy{
             case GET_BALANCE -> service.getBalance(InputUtil.requestAccountId());
             case TRANSFER -> service.transfer(InputUtil.requestCustomerId(),InputUtil.requestCustomerId(),InputUtil.requestMoney());
             case WITH_DRAW -> service.withdraw(InputUtil.requestAccountId(),InputUtil.requestMoney());
-            case EXIT -> new MainMenuStrategy().display();
+            case EXIT -> MainMenuOption.MAIN.getStrategy().display();
         }
     }
 }
