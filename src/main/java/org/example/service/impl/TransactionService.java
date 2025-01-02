@@ -3,10 +3,9 @@ package org.example.service.impl;
 import org.example.model.Account;
 import org.example.model.Bank;
 import org.example.model.Transaction;
-import org.example.service.inter.TransactionInterface;
-import org.example.util.menuutil.AccountUtil;
+import org.example.service.TransactionInterface;
+import org.example.util.AccountUtil;
 
-import java.util.AbstractCollection;
 import java.util.List;
 
 public class TransactionService implements TransactionInterface {

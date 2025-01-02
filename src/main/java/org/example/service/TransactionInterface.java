@@ -1,4 +1,4 @@
-package org.example.service.inter;
+package org.example.service;
 
 import org.example.model.Transaction;
 

@@ -2,7 +2,7 @@ package org.example.service.impl;
 
 import org.example.model.Bank;
 import org.example.model.Customer;
-import org.example.service.inter.CustomerInterface;
+import org.example.service.CustomerInterface;
 
 import java.util.List;
 import java.util.Scanner;

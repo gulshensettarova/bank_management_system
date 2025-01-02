@@ -1,8 +1,8 @@
-package org.example.util.menuutil;
+package org.example.strategy;
 
-public class AccountMenuUtil {
-
-    public static void displayAccountMenu() {
+public class AccountStrategy implements MenuStrategy{
+    @Override
+    public void display() {
         System.out.println("======================================");
         System.out.println("          ACCOUNT OPERATIONS          ");
         System.out.println("======================================");
@@ -12,5 +12,11 @@ public class AccountMenuUtil {
         System.out.println("0. Back to Main Menu");
         System.out.println("======================================");
         System.out.print("Please select an option: ");
+        execute();
+    }
+
+    @Override
+    public void execute() {
+
     }
 }

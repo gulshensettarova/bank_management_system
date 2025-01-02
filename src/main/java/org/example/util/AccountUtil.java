@@ -1,4 +1,4 @@
-package org.example.util.menuutil;
+package org.example.util;
 
 import org.example.model.Account;
 import org.example.model.Bank;

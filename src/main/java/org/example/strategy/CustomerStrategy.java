@@ -1,12 +1,13 @@
-package org.example.util.menuutil;
+package org.example.strategy;
 
 import org.example.enums.menuoption.CustomerMenuOption;
 import org.example.service.InputUtil;
 import org.example.service.impl.CustomerService;
 import org.example.util.CustomerUtil;
 
-public class CustomerMenuUtil {
-    public static void displayCustomerMenu() {
+public class CustomerStrategy implements MenuStrategy{
+    @Override
+    public void display() {
         System.out.println("======================================");
         System.out.println("          CUSTOMER OPERATIONS         ");
         System.out.println("======================================");
@@ -18,22 +19,21 @@ public class CustomerMenuUtil {
         System.out.println("0. Back to Main Menu");
         System.out.println("======================================");
         System.out.print("Please select an option: ");
-        executeCustomerMenu(new CustomerService());
+        execute();
     }
-
-     public static void executeCustomerMenu(CustomerService service) {
-         CustomerMenuOption option = CustomerMenuOption.values()[InputUtil.getOption()];
-        switch (option)  {
+    @Override
+    public void execute() {
+        CustomerMenuOption option = CustomerMenuOption.values()[InputUtil.getOption()];
+        CustomerService service = new CustomerService();
+        switch (option) {
             case VIEW_CUSTOMERS -> CustomerUtil.displayCustomers(service);
             case GET_CUSTOMER_BY_ID -> service.getCustomer(InputUtil.requestCustomerId());
             case ADD_CUSTOMER -> service.add(InputUtil.requestCustomer());
             case REMOVE_CUSTOMER -> service.remove(InputUtil.requestCustomerId());
             case EDIT_CUSTOMER -> service.edit(InputUtil.requestCustomerId(), InputUtil.requestCustomer());
-            case BACK_TO_MAIN_MENU ->MainMenuUtil.displayMainMenu();
+            case BACK_TO_MAIN_MENU ->  new MainMenuStrategy().display();
+
             default -> System.out.println("Invalid option. Please try again.");
-
         }
-
-     }
-
+    }
 }

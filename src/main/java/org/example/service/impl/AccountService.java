@@ -4,7 +4,7 @@ import org.example.enums.AccountType;
 import org.example.model.Account;
 import org.example.model.Customer;
 import org.example.service.CustomerAccountService;
-import org.example.service.inter.AccountInterface;
+import org.example.service.AccountInterface;
 
 import java.util.Scanner;
 

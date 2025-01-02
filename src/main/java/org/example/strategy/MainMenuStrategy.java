@@ -1,11 +1,11 @@
-package org.example.util.menuutil;
-
+package org.example.strategy;
 
 import org.example.enums.menuoption.MainMenuOption;
 import org.example.service.InputUtil;
 
-public class MainMenuUtil {
-    public static void displayMainMenu() {
+public class MainMenuStrategy implements MenuStrategy{
+    @Override
+    public void display() {
         System.out.println("======================================");
         System.out.println("          BANK MANAGEMENT SYSTEM      ");
         System.out.println("======================================");
@@ -15,16 +15,12 @@ public class MainMenuUtil {
         System.out.println("0. Exit");
         System.out.println("======================================");
         System.out.print("Please select an option: ");
-        executeMenu();
-    }
-    public static void executeMenu(){
-        MainMenuOption option = MainMenuOption.values()[InputUtil.getOption()];
-        switch (option){
-            case CUSTOMER -> CustomerMenuUtil.displayCustomerMenu();
-            case ACCOUNT -> AccountMenuUtil.displayAccountMenu();
-            case TRANSACTION -> TransactionMenuUtil.displayTransactionMenu();
-            case EXIT -> System.exit(0);
-        }
+        execute();
     }
 
+    @Override
+    public void execute() {
+        MainMenuOption option = MainMenuOption.values()[InputUtil.getOption()];
+        option.getStrategy().display();
+    }
 }
