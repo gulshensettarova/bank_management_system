@@ -1,7 +1,7 @@
 package org.example.strategy;
 
 import org.example.enums.menuoption.CustomerMenuOption;
-import org.example.service.InputUtil;
+import org.example.util.InputUtil;
 import org.example.service.impl.CustomerService;
 import org.example.util.CustomerUtil;
 

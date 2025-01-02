@@ -1,7 +1,7 @@
 package org.example.strategy;
 
 import org.example.enums.menuoption.TransactionMenuOption;
-import org.example.service.InputUtil;
+import org.example.util.InputUtil;
 import org.example.service.impl.TransactionService;
 
 public class TransactionStrategy implements MenuStrategy{

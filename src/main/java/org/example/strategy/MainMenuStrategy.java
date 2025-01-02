@@ -1,7 +1,7 @@
 package org.example.strategy;
 
 import org.example.enums.menuoption.MainMenuOption;
-import org.example.service.InputUtil;
+import org.example.util.InputUtil;
 
 public class MainMenuStrategy implements MenuStrategy{
     @Override
